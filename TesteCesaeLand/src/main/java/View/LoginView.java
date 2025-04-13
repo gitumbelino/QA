@@ -10,7 +10,9 @@ public class LoginView {
     LoginController loginController;
 
     public LoginView() throws FileNotFoundException {
-        this.loginController = new LoginController();
+        this.loginController = new LoginController(
+                "src/main/resources/Cesaeland_logins.csv"
+        );
     }
 
     public void entryView() throws FileNotFoundException, InterruptedException {

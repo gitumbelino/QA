@@ -10,7 +10,10 @@ public class EngView {
     EngController engController;
 
     public EngView() throws FileNotFoundException {
-        this.engController = new EngController();
+        this.engController = new EngController(
+                "src/main/resources/Cesaeland_vendas",
+                "src/main/resources/Cesaeland_atracoes"
+        );
     }
 
     public void engMenu() throws InterruptedException {

@@ -10,11 +10,15 @@ public class CostsRepository {
 
     private ArrayList<Costs> costsList;
 
-    public CostsRepository() throws FileNotFoundException {
-        this.costsList = CSVReader.readCostsFileToArray("src/main/resources/Cesaeland_custos.csv");
+    public CostsRepository(String filePath) throws FileNotFoundException {
+        this.costsList = CSVReader.readCostsFileToArray(filePath);
     }
 
     public ArrayList<Costs> getUsersList() {
         return costsList;
     }
 }
+
+
+//"src/main/resources/Cesaeland_custos.csv"
+

@@ -12,7 +12,9 @@ public class CostumerView {
 
 
     public CostumerView() throws FileNotFoundException {
-        this.customerController = new CustomerController();
+        this.customerController = new CustomerController(
+                "src/main/resources/Cesaeland_atracoes"
+        );
     }
 
     public void clientMenu() {

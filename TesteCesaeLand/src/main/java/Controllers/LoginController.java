@@ -10,8 +10,8 @@ public class LoginController {
 
     private UsersRepository usersRepository;
 
-    public LoginController() throws FileNotFoundException {
-        usersRepository = new UsersRepository("src/main/resources/Cesaeland_logins.csv");
+    public LoginController(String filePathLogins) throws FileNotFoundException {
+        usersRepository = new UsersRepository(filePathLogins);
     }
 
     public String accessType(String usernameInput, String passwordInput) {
